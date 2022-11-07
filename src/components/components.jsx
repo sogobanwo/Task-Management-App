@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/todolist.css"
@@ -20,8 +21,9 @@ export const ClickableIcons = ({ classname, icons, func }) => {
 
 export const ListItems = ({ todos, todo, setTodo, setTodoText, setEditMode }) => {
   const { id, item, isComplete} = todos
-  const deleteTodo = () => {
-    const updatedTodoDB = todo.filter((sogo) => sogo.id !== todos.id );
+  const deleteTodo = async() => {
+    await axios.post(`http://localhost:8080/delete/${id}`)
+    const updatedTodoDB = todo.filter((sogo) => sogo.id !== id );
     setTodo(updatedTodoDB)
   };
 
