@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { DifferentPages } from "../components/components";
+import { DifferentPages } from "../components/DifferentPages";
 import "../stylesheets/todolist.css";
-import { Header } from "./todolist-homapage";
+import { Header } from "../components/Header";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Loader } from "../components/loader";

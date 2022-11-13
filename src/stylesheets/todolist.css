@@ -8,37 +8,9 @@
 a{
   text-decoration: underline;
   color: #fff;
-  margin: 10px;
+  margin: .5rem .5rem .5rem 0;
 }
 
-
-a:hover{
-  color: red;
-}
-
-/* Clear fix hack */
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clear {
-clear: both;
-}
-
-.alignright {
-float: right;
-padding: 0 0 10px 0; /* note the padding around a right floated image */
-}
-
-.alignleft {
-float: left;
-padding: 0 10px 10px 0; /* note the padding around a left floated image */
-}
 
 /******************************************
 /* BASE STYLES
@@ -46,30 +18,11 @@ padding: 0 10px 10px 0; /* note the padding around a left floated image */
 
 body {
   color: white;
-  font-size: 18px;
+  font-size: .9rem;
   line-height: 1.4;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Comfortaa', cursive;
 }
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-
-/* Center the container */
-#container {
-width: 100%;
-margin: auto;
-}
-
-/* header {
-
-}
-
-footer {
-
-} */
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -77,10 +30,8 @@ footer {
 
 
 .markComplete{
-color: red;
 text-decoration: line-through;
 text-decoration-color: red;
-
 }
 
 #main{
@@ -88,48 +39,34 @@ text-align: center;
 background-color: #BE90D4;
 border: 1px solid #BE90D4;
 border-radius: 10px;
-width: 80%;
-height: 600px;
-margin-left: 10%;
-margin-right: 10%;
+width: 90%;
+height: auto;
+margin-left: 5%;
+margin-right: 5%;
 }
-/* 
-img{
-float: left;
-width:3%;
-height:600px;
-margin-right: 3%;
-} */
 
-#main > h1{
-background-color: #68C3A3;
-width: 70%;
-margin-left: 15%;
-margin-right: 15%;
-border-radius: 5px;
-
+.todo-list{
+  padding-inline-start: 0;
 }
+
 #add-todo-item{
 background-color:#68C3A3;
 font-weight:700;
 color: white;
-height:40px;
-width: 80px;
+height:2rem;
+padding: 0 .5rem;
 border: none;
 border-radius: 5px;
-margin-right: 2%;
 }
+
 .update-todo-item{
 background-color:#68C3A3;
 font-weight:700;
 color: white;
-height:40px;
-width: 80px;
+height:2rem;
 border: none;
 border-radius: 5px;
-margin-right: 2%;
 }
-
 
 .new{
 background-color:#68C3A3;
@@ -140,32 +77,32 @@ width: auto;
 border: none;
 border-radius: 5px;
 margin-bottom: 1rem;
-padding: .5rem 1rem .5rem 1rem ;
+padding: .5rem .5rem .5rem 1rem ;
 display: flex;
 justify-content: space-between;
+align-items: center;
 }
-#clearDone{
-width: 120px;
-}
+
 
 #add-todo-item:hover, button:hover{
 background-color: #1BBC9B;
 }
 
 #new-todo-item{
-height:40px;
-width:50%;
+height:2rem;
+width: 55%;
 }
 
 ul{
-/* list-style-image:url(https://annieselke.com/_ui/desktop/theme-freshamerican/js/images/wf-checkbox-empty.png);
-list-style-position: inside;
-background-color:#D6A2E8;
-color:white; */
-width:60%;
-margin-left: 20%;
-margin-right: 20%;
-list-style: none;
+width:80%;
+margin-left: 10%;
+margin-right: 10%;
+}
+
+.new > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .close{
   background-color: #BE90D4;
@@ -187,7 +124,7 @@ list-style: none;
 }
 .toggle{
   background-color: #BE90D4;
-  padding: .2rem .7rem;
+  padding: .2rem .5rem;
   margin: .3rem;
 }
 .toggle:hover{
@@ -196,7 +133,7 @@ list-style: none;
 }
 .view{
   background-color: #BE90D4;
-  padding: .2rem .7rem;
+  padding: .2rem .5rem;
   margin: .3rem;
   text-decoration: none;
 }
@@ -204,3 +141,24 @@ list-style: none;
   background-color:yellow;
   cursor: pointer;
 }
+
+
+@media (max-width: 768px) {
+  *{
+    font-size: 12px;
+  }
+  
+}
+
+@media (min-width: 769px) and (max-width: 900px ) {
+  *{
+    font-size: 15px;
+  }
+}
+
+/* 
+600px
+768px
+900px
+1024px
+1200px */
